@@ -1,0 +1,203 @@
+/* Fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f7f9fb;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #c0392b;
+    color: white;
+    padding: 15px 0;
+    text-align: center;  /* Centraliza o conteúdo do cabeçalho */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    text-decoration: underline;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 20px;  /* Adicionando padding para um espaçamento interno confortável */
+    background-color: #f0f0f0;  /* Fundo sutil para destacar a seção */
+    border-radius: 8px;  /* Bordas arredondadas para um design mais suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra leve para dar profundidade */
+}
+
+.welcome-section h1 {
+    font-size: 2rem;  /* Tamanho ajustado para telas menores */
+    font-weight: 700;  /* Peso de fonte mais forte para maior impacto */
+    margin-bottom: 20px;  /* Maior espaço abaixo do título */
+    color: #333;
+    text-transform: uppercase;  /* Maiúsculas para dar ênfase */
+    letter-spacing: 2px;  /* Espaçamento entre as letras para um estilo mais moderno */
+    transition: transform 0.3s ease;  /* Efeito suave ao passar o mouse */
+}
+
+.welcome-section h1:hover {
+    transform: translateY(-5px);  /* Efeito de hover sutil para um toque dinâmico */
+}
+
+.welcome-section p {
+    font-size: 1rem;  /* Fonte menor */
+    color: #777;
+    line-height: 1.6;  /* Aumentando a altura da linha para maior legibilidade */
+    max-width: 700px;
+    margin: 0 auto;  /* Centraliza o parágrafo */
+    padding: 0 20px;  /* Adiciona espaçamento nas laterais */
+}
+
+/* Seção Hero */
+.hero-section {
+    background: url('../img/hero.jpg') no-repeat center center/cover;
+    text-align: center;  /* Centraliza o conteúdo da seção hero */
+    padding: 100px 20px;
+    color: white;
+    position: relative;
+}
+
+.hero-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    z-index: 2;
+    position: relative;
+}
+
+.hero-section .slogan {
+    font-size: 1.5rem;
+    z-index: 2;
+    position: relative;
+}
+
+.gallery-section {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;  /* Centraliza o texto */
+}
+
+.car-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.car {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 250px; /* Tamanho fixo para as imagens */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.car:hover {
+    transform: translateY(-10px);
+}
+
+.car img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.car p {
+    font-weight: 500;
+    color: #333;
+    margin-top: 10px;
+}
+
+.btn-buy {
+    background-color: #c0392b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-buy:hover {
+    background-color: #a93226;
+}
+
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    .welcome-section h1 {
+        font-size: 1.6rem;  /* Tamanho menor em telas menores */
+    }
+
+    .welcome-section p {
+        font-size: 1rem;  /* Ajuste do tamanho do parágrafo */
+        max-width: 90%;  /* Reduzindo o tamanho máximo do parágrafo */
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;  /* Ajustando o tamanho da fonte do título na seção hero */
+    }
+
+    .hero-section .slogan {
+        font-size: 1.2rem;  /* Ajustando o tamanho da fonte do slogan */
+    }
+
+    .gallery-section h2 {
+        font-size: 1.5rem;  /* Reduzindo o tamanho do título da galeria */
+    }
+
+    .car-gallery {
+        grid-template-columns: repeat(2, 1fr);  /* Alterando para 2 colunas em telas menores */
+    }
+}
